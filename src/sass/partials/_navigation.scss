@@ -1,0 +1,126 @@
+/* Layout: Navigation
+   ========================================================================== */
+
+.main-navigation {
+    // Set up variables
+    $highlight: nth($menu__bg-color, 1);
+    $shadow: nth($menu__bg-color, 2);
+
+    clear: both;
+    margin-top: (-$size__gutter - 1rem);
+    margin-bottom: ($size__gutter - $menu__items-space);
+
+    ul {
+        display: flex;
+        @include no-list-style;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include breakpoint(screen-xs) {
+            flex-direction: row;
+        }
+
+        @include breakpoint(screen-md) {
+            justify-content: flex-start;
+        }
+    }
+
+    // Menu items
+    li {
+        position: relative;
+        margin-bottom: $menu__items-space; // For long two-line menus
+
+        @include breakpoint(screen-xs) {
+            margin-right: $menu__items-space;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    li > a {
+        // Style the menu item as a button
+        $border-color: lighten($highlight, 5%), darken($shadow, 11.5%), darken($shadow, 11.5%), lighten($highlight, 5%);
+        @include button-variant($menu__text-color, $menu__bg-color, $border-color, $menu__text-shadow);
+
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 5px;
+
+        display: block;
+        padding: 1.4rem 2.1rem;
+        font-size: $menu__text-size;
+        transition: all 180ms ease;
+
+        &:hover {
+            border-radius: 10px 0 10px 0;
+            text-decoration: none;
+        }
+
+    }
+
+    // Current menu item
+    .current > a,
+    .current > a:hover {
+        background-image: linear-gradient(
+            to bottom,
+            nth($menu__bg-color--current, 1),
+            nth($menu__bg-color--current, 2)
+        );
+        border-color: transparent;
+        border-radius: 10px 0 10px 0;
+        text-shadow: 0 1px 0 rgba(#000, 0.25);
+
+        &, &:visited {
+            color: $menu__text-color--current;
+        }
+    }
+
+    .current > a:hover {
+        border-radius: 0 10px 0 10px;
+    }
+}
+
+
+// Sub-menu
+.main-navigation .sub-menu {
+    min-width: 100%;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+
+    top: 100%;
+    left: 0;
+    display: none;
+    box-shadow: 0 1px 6px rgba(#000, 0.2);
+
+    @include breakpoint(screen-xs) {
+        min-width: 20rem;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    li > a {
+        font-size: $menu__text-size * 0.9;
+    }
+
+    li > a,
+    .current > a:hover  {
+        border-radius: 0;
+    }
+
+    // Sub-menu, level n
+    & .sub-menu {
+        top: 0;
+        left: 100%;
+    }
+}
+
+// Show sub-menu on hover
+.main-navigation li:hover > .sub-menu {
+    display: block;
+}

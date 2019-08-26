@@ -1,0 +1,95 @@
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+// Apply a natural box layout model to all elements, but allowing components to change
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+// Set base font size
+html {
+    font-size: 62.5%; // Makes 1 rem = 10 px
+}
+
+/* Body
+   ========================================================================== */
+
+body {
+    color: $color__text;
+    font: {
+        family: $font__main-family;
+        size:   $font__main-size;
+        weight: $font__main-weight;
+    }
+    line-height: $font__main-line-height;
+
+    //
+    // Set body background
+    //
+    background-color: $body__bg-color;
+
+    // Use a gradient background
+    @if gradient == $body__bg-type {
+        background-image: linear-gradient(
+            $body__gradient-angle,
+            $body__gradient-color 25%,
+            transparent 25%,
+            transparent 50%,
+            $body__gradient-color 50%,
+            $body__gradient-color 75%,
+            transparent 75%,
+            transparent);
+        background-size: $body__gradient-size;
+    }
+
+    // or use an image background
+    @else {
+        background-image: url($body__image);
+        background-repeat: $body__image-repeat;
+        background-attachment: $body__image-attachment;
+    }
+
+    // No support for CSS3 gradients
+    .no-cssgradients & {
+        background-image: url($body__gradient-fallback);
+        background-repeat: $body__image-repeat;
+        background-attachment: $body__image-attachment;
+    }
+}
+
+
+/* Links
+   ========================================================================== */
+
+a {
+    color: $link__color;
+    text-decoration: none;
+
+    &:hover {
+        color: $link__color-hover;
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: $link__color-visited;
+    }
+}
+
+
+/* Selection color
+   ========================================================================== */
+
+::selection {
+    background: $selection__bg;
+    color: $selection__text-color;
+    text-shadow: none;
+}

@@ -1,0 +1,29 @@
+/* Lists
+   ========================================================================== */
+
+// Unordered lists
+ul {
+	list-style: square;
+}
+
+
+// Ordered lists
+ol {
+	list-style-type: decimal;
+}
+
+ol ol { list-style: upper-roman; }
+ol ol ol { list-style: lower-roman; }
+ol ol ol ol { list-style: upper-alpha; }
+ol ol ol ol ol { list-style: lower-alpha; }
+
+
+// Description lists
+dt {
+	margin-top: 1rem;
+	font-weight: $font__weight-bold;
+}
+
+dd {
+	margin-left: $size__gutter--small;
+}

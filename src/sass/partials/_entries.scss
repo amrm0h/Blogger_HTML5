@@ -1,0 +1,86 @@
+/* Layout: Entries
+   ========================================================================== */
+
+.entry {
+    @include separator();
+    position: relative;
+}
+
+
+.entry-title {
+    font-size: $entry__title-size;
+    letter-spacing: -0.1rem;
+    text-align: center;
+
+    @include breakpoint(screen-sm) {
+        text-align: left;
+    }
+}
+
+
+.entry-meta {
+    margin-top: $size__gutter--small;
+    color: $color__gray;
+
+    // Entry meta in <header>
+    header & {
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $color__seperator;
+        text-align: center;
+
+        @include breakpoint(screen-sm) {
+            text-align: left;
+        }
+    }
+
+    // Entry meta as <footer>
+    @at-root footer.entry-meta {
+        padding-top: 1.5rem;
+        border-top: 1px solid $color__seperator;
+    }
+}
+
+
+.entry-content {
+
+    // Read more link
+    .more-link {
+        font-size: $font__main-size * 1.2;
+    }
+}
+
+
+// Entry thumbnails
+.thumbnail {
+    display: block;
+    margin: 0 auto $size__gutter--small;
+
+    // Outline the image when focused
+    a:focus & {
+        outline: 5px auto;
+    }
+
+    // Rotate thumbnails on hover
+    .entry &:hover {
+        transform: rotate(-2deg);
+    }
+
+    .entry:nth-of-type(even) &:hover {
+        transform: rotate(2deg);
+    }
+
+    @include breakpoint(screen-sm) {
+        display: inline;
+        float: left;
+        margin: 0 $size__gutter--small 1rem 0;
+        border-radius: 3px 0 0 3px;
+        border: 0.4rem solid #fff;
+        box-shadow: 0 0 6px rgba(#000, 0.1);
+    }
+
+    @include breakpoint(screen-lg) {
+        box-shadow: 1px 1px 6px rgba(#000, 0.1);
+        margin-left: ($size__gutter - $size__gutter * 3);
+    }
+}

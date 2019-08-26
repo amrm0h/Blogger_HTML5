@@ -1,0 +1,33 @@
+/* Headings
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font: {
+        family: $font__heading-family;
+        weight: $font__heading-weight;
+    }
+    line-height: $font__heading-line-height;
+}
+
+// Style h3 and h5 headings differently
+h3 {
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid $color__seperator;
+    color: $color__primary;
+}
+
+h5 {
+    font-size: $font__main-size;
+    color: $color__gray;
+    text-transform: uppercase;
+}
+
+
+/* HTML elements
+   ========================================================================== */
+
+hr {
+    margin: $size__gutter 0;
+    border: 0;
+    border-top: 4px double $hr__border-color;
+}

@@ -1,0 +1,104 @@
+/* =============================================================================
+   Layout
+   ========================================================================== */
+
+/**
+ * Set site width
+ */
+body {
+    width: 100%;
+    max-width: $size__site;
+    margin: 0 auto;
+}
+
+/**
+ * Content wrapper
+ */
+.site-content {
+    // Fade-out gradient at the top of the content
+    background-image: linear-gradient(
+        to bottom,
+        rgba($content__bg-color, 0.25),
+        $content__bg-color 12rem
+    );
+
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba($color__gray-light, 0.4);
+
+    padding: $size__gutter;
+
+    // Use Flexbox for screen bigger than the medium width
+    @include breakpoint(screen-md) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    // No support for CSS3 gradients
+    .no-cssgradients & {
+        background-color: $content__bg-color;
+    }
+}
+
+
+/**
+ * Main navigation
+ */
+.main-navigation {
+    @include breakpoint(screen-md) {
+        flex: 1 100%;
+    }
+}
+
+
+/**
+ * Main content
+ */
+main {
+    @include breakpoint(screen-md) {
+        flex: 3 56%;
+    }
+}
+
+
+/**
+ * Sidebar
+ */
+.sidebar {
+    @include breakpoint(screen-md) {
+        flex: 1 34%;
+        margin-left: $size__gutter;
+        padding-left: $size__gutter;
+        border-left: 1px solid $color__seperator;
+    }
+}
+
+
+
+/* Grid
+   ========================================================================== */
+
+.row {
+    // The negative margin is even out by the padding on .col-
+    margin-right: -($grid__gutter / 2);
+    margin-left: -($grid__gutter / 2);
+
+    @include breakpoint(screen-sm) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+ul.row {
+    @include no-list-style;
+}
+
+// Generate column classes
+@for $i from 1 through $grid__columns {
+    .col-#{$i} {
+        $flex-basis: percentage($i / $grid__columns );
+
+        flex: $i 1 $flex-basis;
+        padding-right: ($grid__gutter / 2);
+        padding-left: ($grid__gutter / 2);
+    }
+}

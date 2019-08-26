@@ -1,0 +1,135 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Breakpoint mixin
+// Source: http://css-tricks.com/naming-media-queries/
+@mixin breakpoint($point) {
+    @if $point == screen-lg {
+        @media (min-width: $breakpoint__screen-lg) { @content; }
+    }
+    @else if $point == screen-md {
+        @media (min-width: $breakpoint__screen-md) { @content; }
+    }
+    @else if $point == screen-sm {
+        @media (min-width: $breakpoint__screen-sm)  { @content; }
+    }
+    @else if $point == screen-xs {
+        @media (min-width: $breakpoint__screen-xs)  { @content; }
+    }
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin square($size) {
+    @include size($size, $size);
+}
+
+// 3d text-shadow
+@mixin shadow($color, $steps) {
+    $content: ();
+    @for $i from 1 through $steps {
+        $shadow: unquote(#{$i}px #{$i}px $color);
+        $content: append($content, $shadow, comma);
+    }
+    text-shadow: $content;
+}
+
+// Remove list styles
+@mixin no-list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+// Separator
+@mixin separator() {
+    border-bottom: 4px double $color__seperator;
+    padding-bottom: $size__gutter;
+    margin-bottom: $size__gutter;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+
+// Buttons
+@mixin button() {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-weight: $btn__font-weight;
+    padding: 0.9rem 1.4rem;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin button-variant($color, $background, $border, $shadow: false) {
+
+    // Use a gradient if $background is a list
+    @if type-of($background) == list {
+        background-image: linear-gradient(to bottom, $background);
+    } @else {
+        background: $background;
+    }
+
+    @if $border != false {
+        border-color: join($border, (), 'space'); // Convert comma to space
+    }
+
+    @if $shadow != false {
+        text-shadow: 1px 1px 0 $shadow;
+    }
+
+    &, &:visited {
+        color: $color;
+    }
+
+    &:hover {
+        // Use a gradient if $background is a list
+        @if type-of($background) == list {
+            $hover-bg: ();
+
+            // Darken each color in the list
+            @each $bg in $background {
+                $hover-bg: append( $hover-bg, darken($bg, $btn__bg-hover-darken), 'comma' );
+            }
+
+            background-image: linear-gradient(to bottom, $hover-bg);
+        } @else {
+            background: darken($background, $btn__bg-hover-darken);
+        }
+
+        color: darken($color, $btn__bg-hover-darken);
+    }
+}
+
+// Alerts
+// From Twitter Bootstrap
+@mixin alert-variant($background, $border, $text-color) {
+    background: $background;
+    border-color: $border;
+    color: $text-color;
+}

@@ -1,0 +1,46 @@
+/* Buttons
+   ========================================================================== */
+
+.btn {
+    @include button;
+
+    @include button-variant(
+        $btn__default-text-color,
+        $btn__default-bg,
+        $btn__default-border-color,
+        $btn__default-shadow-color
+    );
+}
+
+.btn-primary {
+    @include button;
+
+    @include button-variant(
+        $btn__primary-text-color,
+        $btn__primary-bg,
+        $btn__primary-border-color,
+        $btn__primary-shadow-color
+    );
+}
+
+
+// Add the button styles to all buttons
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    @extend .btn;
+
+    &.btn-primary {
+        @extend .btn-primary;
+    }
+
+    // Disabled buttons
+    &[disabled] {
+        pointer-events: none;
+        cursor: not-allowed;
+        box-shadow: none;
+        opacity: 0.65;
+    }
+}
+

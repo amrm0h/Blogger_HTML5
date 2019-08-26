@@ -1,0 +1,33 @@
+{
+  "name": "jayj-html5-theme",
+  "version": "3.0.0",
+  "description": "A free HTML5 theme.",
+  "homepage": "http://jayj.dk/themes/html5-theme/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jayj/Jayj-HTML5.git"
+  },
+  "author": "Jesper Johansen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jayj/Jayj-HTML5/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.7.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-imagemin": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.7.4",
+    "grunt-autoprefixer": "~0.7.1",
+    "grunt-contrib-cssmin": "~0.8.0",
+    "grunt-processhtml": "~0.3.3",
+    "load-grunt-tasks": "~0.6.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-newer": "~0.7.0",
+    "grunt-bower": "~0.13.4",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-modernizr": "~0.5.2"
+  }
+}

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Put your title and description here! -->
+    <title>Bloger HTML5 Theme</title>
+    <meta name="description" content="">
+
+    <!-- Mobile optimized viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load styles -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Load Open Sans and Merriweather from Google Fonts
+        For optimal performance, customize it to load the styles you need:
+        http://goo.gl/QufgJ
+    -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700|Merriweather:300,400,700,900" rel="stylesheet">
+
+    <!-- All JavaScript at the bottom, except for Modernizr.
+        Modernizr enables HTML5 elements & feature detects.
+        For optimal performance, use a custom Modernizr build:
+        www.modernizr.com/download/
+    -->
+    <!-- build:js js/modernizr-custom.min.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- /build-->
+</head>
+
+<body>
+
+    <header class="site-header" role="banner">
+
+        <h1 class="site-title">
+            <a href="index.html" rel="home">Bloger HTML5 Theme</a>
+        </h1>
+
+        <h2 class="site-description">
+            This is an awesome description of the site!
+        </h2>
+
+    </header> <!-- /.site-header -->
+
+    <div class="site-content">
+
+        <!-- Main navigation -->
+        <nav class="main-navigation" role="navigation">
+            <h1 class="screen-reader-text">Menu</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current">
+                    <a href="test.html">Test page</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Subpage</a></li>
+                        <li><a href="#">Subpage 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> <!-- ./main-navigation -->
+
+        <main role="main">
+
+            <article class="entry">
+
+                <header class="entry-header">
+                    <h1 class="entry-title">Test page</h1>
+                </header> <!-- ./entry-header -->
+
+                <div class="entry-content">
+                    <p>This page contains examples of many basic HTML elements
+                    and their styles.</p>
+
+                    <section>
+
+                        <h2>Headings</h2>
+
+                        <p>Nullam quis risus eget urna mollis ornare vel eu leo.
+                        Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+
+                        <h1>h1. Heading 1</h1>
+                        <h2>h2. Heading 2</h2>
+                        <h3>h3. Heading 3</h3>
+                        <h4>h4. Heading 4</h4>
+                        <h5>h5. Heading 5</h5>
+                        <h6>h6. Heading 6</h6>
+
+                    </section>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Basic Grid</h2>
+
+                            <p>The template has a basic 12-column grid included. It's in no way
+                            as powerful as other grids out there (like <a href="http://getbootstrap.com/css/#grid">Twitter Bootstrap</a> or <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Solved by Flexbox</a>) so if you want more control you should
+                            their grid instead.</p>
+                        </div>
+
+                        <div class="col-6">
+                             <h3>The HTML</h3>
+<pre>
+&lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div> <!-- /.row -->
+
+                        <!-- DEMO -->
+                        <style>
+                            .show-grid [class*="col-"] div {
+                                background-color: #eee;
+                                text-align: center;
+                                border-radius: 3px;
+                                padding: .8em 1em;
+                                margin-bottom: 2rem;
+                            }
+                        </style>
+                        <!-- /DEMO -->
+
+                        <div class="row show-grid">
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12</div></div>
+                            <div class="col-1"><div>1/12 continues</div></div>
+                            <div class="col-1"><div>and increases width</div></div>
+                            <div class="col-1"><div>to fill out</div></div>
+                            <div class="col-1"><div>the remaining space.</div></div>
+                        </div>
+
+                        <div class="row show-grid">
+                            <div class="col-4"><div>1/3</div></div>
+                            <div class="col-4"><div>1/3</div></div>
+                            <div class="col-4"><div>1/3</div></div>
+                        </div>
+
+                        <div class="row show-grid">
+                            <div class="col-4"><div>1/3</div></div>
+                            <div class="col-8"><div>2/3</div></div>
+                        </div>
+
+                        <div class="row show-grid">
+                            <div class="col-6"><div>1/2</div></div>
+                            <div class="col-6"><div>1/2</div></div>
+                        </div>
+
+                        <div class="row show-grid">
+                            <div class="col-12"><div>Full</div></div>
+                        </div>
+
+                        <div class="row show-grid">
+                            <div class="col-3"><div>1/4</div></div>
+                            <div class="col-3"><div>1/4</div></div>
+                            <div class="col-3"><div>1/4</div></div>
+                            <div class="col-3"><div>1/4</div></div>
+                        </div>
+
+                        <div class="row show-grid">
+                            <div class="col-6">
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            </div>
+
+                            <div class="col-6">
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Vestibulum mollis velit non gravida venenatis.
+                                Praesent consequat lectus purus, ut scelerisque
+                                velit condimentum eu. Maecenas sagittis ante ut
+                                turpis varius interdum. Quisque tellus ipsum,
+                                eleifend non ipsum id, suscipit ultricies neque.</div>
+                            </div>
+                        </div>
+
+                    <hr />
+
+                    <h2>Blockquotes</h2>
+
+                        <p>To include a blockquote, wrap <code>&lt;blockquote&gt;</code>
+                        around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.</p>
+
+                        <p>Include an optional <code>&lt;footer&gt;</code> for identifying the source and <code>&lt;cite&gt;</code> for the name of the source work.</p>
+
+<pre>
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Integer posuere erat a ante venenatis.&lt;/p&gt;
+    &lt;footer&gt;Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;</pre>
+
+                        <h3>Example blockquotes</h3>
+
+                        <p>Single line blockquote:</p>
+                        <blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+
+                        <p>Multi line blockquote with a cite reference in footer tag:</p>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Integer posuere erat a ante venenatis. Nullam quis
+                            risus eget urna mollis ornare vel eu leo. Cum sociis
+                            natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Nullam id dolor id nibh
+                            ultricies vehicula.</p>
+
+                            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+
+                        <p>Right-aligned blockquote (<code>.blockquote-reverse</code>) with a cite reference:</p>
+                        <blockquote class="blockquote-reverse">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Integer posuere erat a ante venenatis. Nullam quis
+                            risus eget urna mollis ornare vel eu leo. Cum sociis
+                            natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Nullam id dolor id nibh
+                            ultricies vehicula.</p>
+
+                            <cite>Someone famous</cite>
+                        </blockquote>
+
+
+                    <hr />
+
+                    <h2>Unordered Lists</h2>
+
+                        <ul>
+                            <li>List item one
+                                <ul>
+                                    <li>List item one
+                                        <ul>
+                                            <li>List item one</li>
+                                            <li>List item two</li>
+                                            <li>List item three</li>
+                                            <li>List item four</li>
+                                        </ul>
+                                    </li>
+                                    <li>List item two</li>
+                                    <li>List item three</li>
+                                    <li>List item four</li>
+                                </ul>
+                            </li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                        </ul>
+
+                    <h2>Ordered List</h2>
+
+                        <ol>
+                            <li>List item one
+                                <ol>
+                                    <li>List item one
+                                        <ol>
+                                            <li>List item one</li>
+                                            <li>List item two</li>
+                                            <li>List item three</li>
+                                            <li>List item four</li>
+                                        </ol>
+                                    </li>
+                                    <li>List item two</li>
+                                    <li>List item three</li>
+                                    <li>List item four</li>
+                                </ol>
+                            </li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                        </ol>
+
+                    <h2>Description Lists</h2>
+
+                        <dl>
+                            <dt>List Title</dt>
+                            <dd>List division.</dd>
+
+                            <dt>Description List</dt>
+                            <dd>A description list is perfect for defining terms.</dd>
+
+                            <dt>HTML</dt>
+                            <dd>HyperText Markup Language</dd>
+
+                            <dt>CSS</dt>
+                            <dd>Cascading Style Sheets (CSS) is a style sheet language
+                            used for describing the look and formatting of a document
+                            written in a markup language (Wikipedia).</dd>
+                        </dl>
+
+                    <hr />
+
+                    <h2>Tables</h2>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>&lt;table&gt;</code></td>
+                                    <td>Wrapping element for displaying data in a tabular format</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;thead&gt;</code></td>
+                                    <td>Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;tfoot&gt;</code></td>
+                                    <td>Container element for table footer rows (<code>&lt;tr&gt;</code>) to label table columns</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;tbody&gt;</code></td>
+                                    <td>Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;tr&gt;</code></td>
+                                    <td>Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;td&gt;</code></td>
+                                    <td>Default table cell</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;th&gt;</code></td>
+                                    <td>Special table cell for column (or row, depending on scope and placement) labels<br>
+                                        Must be used within a <code>&lt;thead&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;caption&gt;</code></td>
+                                    <td>Description or summary of what the table holds, especially useful for screen readers</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Tag</td>
+                                    <td>Description</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <h3>Example code</h3>
+<pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;…&lt;/th&gt;
+            &lt;th&gt;…&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;…&lt;/td&gt;
+            &lt;td&gt;…&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;…&lt;/td&gt;
+            &lt;td&gt;…&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+
+                    <hr />
+
+                    <h2>HTML Tags</h2>
+
+                        <p><strong>Address Tag</strong></p>
+                        <address>1600 Pennsylvania Ave NW <br />
+                        Washington, DC 20500 <br />
+                        United States</address>
+
+                        <p><strong>Anchor Tag (aka. Link)</strong></p>
+                        <p>This is an example of a <a title="Apple" href="http://locallylost.com/stargazer/2013/01/11/markup-html-tags-and-formatting/">link</a> to the source of this section.</p>
+
+                        <p><strong>Abbreviation Tag</strong></p>
+                        <p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for &#8220;seriously&#8221;.</p>
+
+                        <p><strong>Delete Tag</strong></p>
+                        <p>The <code>del</code> element will let you <del>strikeout text</del> to represent a removal from the document.</p>
+
+                        <p><strong>Emphasize Tag</strong></p>
+                        <p>The emphasize tag should <em>italicize</em> text.</p>
+
+                        <p><strong>Insert Tag</strong></p>
+                        <p>This tag should denote <ins>inserted</ins> text.</p>
+
+                        <p><strong>Code Tag</strong></p>
+                        <p>The <code>code</code> element represents a fragment of computer code, like <code>word-wrap: break-word;</code>.</p>
+
+                        <p><strong>Keyboard Tag</strong></p>
+                        <p>This scarsly known tag emulates <kbd>keyboard text</kbd>.</p>
+
+                        <p><strong>Preformatted Tag</strong></p>
+                        <p>This tag styles large blocks of code.</p>
+<pre>.post-title {
+    margin: 0 0 5px;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1.2;
+    and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
+}</pre>
+                        <p><strong>Quote Tag</strong></p>
+                        <p><q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer</p>
+
+                        <p><strong>Strong Tag</strong></p>
+                        <p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+
+                        <p><strong>Subscript Tag</strong></p>
+                        <p>Getting our science styling on with H<sub>2</sub>O, which should push the &#8220;2&#8243; down.</p>
+
+                        <p><strong>Superscript Tag</strong></p>
+                        <p>Still sticking with science and Isaac Newton&#8217;s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+
+                        <p><strong>Variable Tag</strong></p>
+                        <p>This allows you to denote <var>variables</var>.</p>
+
+                    <hr />
+
+                    <h2>Forms</h2>
+
+                    <form>
+
+                        <fieldset>
+                            <legend>Text fields</legend>
+
+                            <p><label>Text input <input type="text" value="value"></label></p>
+
+                            <p><label>Text input (required) <input type="text" required></label></p>
+
+                            <p><label>Text input (with placeholder) <input type="text" placeholder="12345-6789"></label></p>
+
+                            <div><label>Text input (with datalist) <input type="text" list="browsers"></label>
+                                <datalist id="browsers">
+                                    <option value="Chrome">
+                                    <option value="Firefox">
+                                    <option value="Internet Explorer">
+                                    <option value="Opera">
+                                    <option value="Safari">
+                                </datalist>
+                            </div>
+
+                            <p><label>Text input (disabled) <input type="text" disabled value="value"></label></p>
+
+                            <p><label>Text input (readonly) <input type="text" readonly value="value"></label></p>
+
+                            <p><label>Email input <input type="email"></label></p>
+
+                            <p><label>Search input <input type="search"></label></p>
+
+                            <p><label>Tel input <input type="tel"></label></p>
+
+                            <p><label>URL input <input type="url" placeholder="http://"></label></p>
+
+                            <p><label>Password input <input type="password" value="password"></label></p>
+
+                            <p><label>Textarea <textarea cols="30" rows="5">Textarea text</textarea></label></p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Date fields</legend>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><label for="idd">Date input</label> <input type="date" id="idd"></p>
+                                    <p><label for="idm">Month input</label> <input type="month" id="idm"></p>
+                                </div>
+
+                                <div class="col-6">
+                                    <p><label for="idw">Week input</label> <input type="week" id="idw"></p>
+                                    <p><label for="idt">Time input</label> <input type="time" id="idt"></p>
+                                </div>
+
+                                <div class="col-6">
+                                    <p><label for="idti">Datetime input</label> <input type="datetime" id="idti"></p>
+                                    <p><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl"></p>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Other fields</legend>
+
+                            <p><label>Color input <input type="color"></label></p>
+
+                            <p><label>Color input (with list) <input type="color" list></label>
+                            </p>
+
+                            <p><label>Number input <input type="number" min="0" max="10"></label></p>
+
+                            <p><label>Range input <input type="range"></label></p>
+
+                            <p><label>File input <input type="file"></label></p>
+
+                            <p class="radio"><label><input type="radio" name="rad"> Radio input</label></p>
+                            <p class="radio"><label><input type="radio" name="rad"> Radio input</label></p>
+
+                            <p><label class="checkbox"><input type="checkbox"> Checkbox input</label></p>
+
+                            <p><label class="checkbox"><input type="checkbox" disabled> Checkbox input (disabled)</label></p>
+
+                            <p>
+                                <label>Select field<br>
+                                    <select>
+                                        <option>Option 01</option>
+                                        <option>Option 02</option>
+                                    </select>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>Multiple Select field<br>
+                                    <select multiple="multiple">
+                                        <option>Option 01</option>
+                                        <option>Option 02</option>
+                                        <option>Option 03</option>
+                                        <option>Option 04</option>
+                                        <option>Option 05</option>
+                                        <option>Option 06</option>
+                                    </select>
+                                </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Input fields and buttons</legend>
+
+                            <p><a href="#" class="btn" role="button">Link (.btn)</a></p>
+                            <p><input type="submit" value="Submit (input)"></p>
+                            <p><input type="button" value="Button (input)"></p>
+                            <p><input type="reset" value="Reset (input)"></p>
+                            <p><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></p>
+
+                            <p><a href="#" class="btn-primary" role="button">Link (.btn-primary)</a></p>
+                            <p><input type="submit" class="btn-primary" value="Submit (.btn-primary)"></p>
+                            <p><input type="button" class="btn-primary" value="Button (.btn-primary)"></p>
+                            <p><input type="reset" class="btn-primary" value="Reset (.btn-primary)"></p>
+
+
+                            <p><button type="submit">Submit (button)</button></p>
+                            <p><button type="button">Button (button)</button></p>
+                            <p><button type="reset">Reset (button)</button></p>
+                            <p><button type="submit" disabled>Disabled button</button></p>
+                        </fieldset>
+                    </form>
+
+                <hr />
+
+                <h2>Media</h2>
+
+                    <h3>Figure</h3>
+
+                    <figure>
+                        <a href="http://i.imgur.com/lG2bb.jpg">
+                            <img src="http://i.imgur.com/lG2bbm.jpg" alt="Image alt">
+                        </a>
+                        <figcaption>Figure caption (<code>&lt;figcaption&gt;</code> )</figcaption>
+                    </figure>
+
+                    <p>A figure with code as content and <code>&lt;figcaption&gt;</code> before the content:</p>
+
+                    <figure>
+                        <figcaption>Listing 4. The primary core interface API declaration.</figcaption>
+<pre><code>interface PrimaryCore {
+    boolean verifyDataLine();
+    void sendData(in sequence&lt;byte> data);
+    void initSelfDestruct();
+}</code></pre>
+                    </figure>
+                    <p>Trailing text.</p>
+
+                    <h3>Wide image</h3>
+
+                    <img src="http://i.imgur.com/lG2bb.jpg" alt="Image alt">
+
+                    <h3>Youtube video (iframe)</h3>
+
+                    <iframe width="640" height="360" src="//www.youtube.com/embed/UiyDmqO59QE" allowfullscreen frameborder="0"></iframe>
+
+                    <h3>HTML5 video</h3>
+
+                    <figure>
+                        <video controls preload="none" poster="http://i.imgur.com/3TFTUKs.png">
+                            <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                            <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+                            <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+
+                            <p>Your browser does not support the <code>video</code> element.</p>
+                        </video>
+
+                        <figcaption>Video from <a href="http://www.w3.org/2010/05/video/mediaevents.html">W3 demo page</a>.</figcaption>
+                    </figure>
+
+                    <h3>HTML5 Audio</h3>
+
+                    <audio preload="none" controls>
+                        <source type="audio/mpeg" src="http://wpthemes.jayj.dk/cakifo/files/hayseedrag-thedizzytrio_vbr.mp3">
+
+                        <p>Your browser does not support the <code>audio</code> element.</p>
+                    </audio>
+
+                <hr />
+
+                <h2>Miscellaneous</h2>
+
+                    <h3>Alerts</h3>
+
+                    <div class="alert alert-success">
+                        <strong>Success!</strong> You successfully read this important alert message.
+                    </div>
+
+                    <div class="alert alert-info">
+                        <strong>Tip!</strong> This is an alert that needs your attention, but it’s not a huge priority just yet.
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <strong>Warning:</strong> Change this and that and <a href="#">try again</a>.
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <h4>Holy guacamole!</h4>
+                        <p>This is a super important error.</p>
+                        <p>This is line two</p>
+                    </div>
+
+                    <div class="alert">
+                        <strong>Alert</strong> without any classes
+                    </div>
+
+<pre>
+&lt;div class=&quot;alert alert-success&quot;&gt; [...] &lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt; [...] &lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt; [...] &lt;/div&gt;
+&lt;div class=&quot;alert alert-error&quot;&gt; [...] &lt;/div&gt;
+&lt;div class=&quot;alert&quot;&gt; [...] &lt;/div&gt;
+</pre>
+
+                    <h3>Helper classes</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.alignleft</code></td>
+                                <td>Floats an element to the left</td>
+                            </tr>
+                            <tr>
+                                <td><code>.alignright</code></td>
+                                <td>Floats an element to the right</td>
+                            </tr>
+                            <tr>
+                                <td><code>.aligncenter</code></td>
+                                <td>Makes the element a block element and centers it</td>
+                            </tr>
+                            <tr>
+                                <td><code>.clearfix</code></td>
+                                <td>For clearing floats, see <a href="http://nicolasgallagher.com/micro-clearfix-hack/">"A new micro clearfix hack"</a></td>
+                            </tr>
+                            <tr>
+                                <td><code>.screen-reader-text</code></td>
+                                <td>Hides text visually, but it will be available for screenreaders</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div> <!-- /.entry-content -->
+
+            </article> <!-- /.entry-->
+
+        </main> <!-- /main -->
+
+    </div> <!-- ./site-content -->
+
+    <footer role="contentinfo">
+        <!-- You're free to remove the credit link to amrmoh in the footer,
+            but please, please leave it there :) -->
+        <p>
+            Copyright &copy; 2014 <a href="#">Sitename.com</a>
+            <span class="sep">|</span>
+            Design by <a href="#" title="Design by amrmoh">Amr Mohamed</a>
+        </p>
+    </footer> <!-- /footer -->
+
+    <!-- Load jQuery -->
+    <!-- build:[src] js/ -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- /build -->
+
+    <!-- build:remove -->
+    <script src="/bower_components/google-code-prettify/src/prettify.js"></script>
+    <script>
+        // Call the Google Code Prettify
+        if (typeof prettyPrint === 'function') {
+            $('pre').addClass('prettyprint').filter(':even').addClass('linenums');
+            prettyPrint();
+        }
+    </script>
+    <!-- /build -->
+
+    <!-- Load custom scripts -->
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>

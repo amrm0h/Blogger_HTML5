@@ -1,0 +1,46 @@
+/* =============================================================================
+   Misc
+   ========================================================================== */
+
+
+/* Alerts
+   ========================================================================== */
+
+.alert {
+	padding: 1.6rem 2rem;
+	margin-bottom: $size__gutter--small;
+	background: $alert__bg;
+	border-left: 5px solid $alert__border-color;
+	border-radius: 0 5px 5px 0;
+	color: $alert__text-color;
+
+	// Headings for larger alerts
+	h4 {
+		color: inherit;
+		margin: 1rem 0;
+	}
+
+	// Improve alignment and spacing of inner content
+	p + p {
+		margin-bottom: 0.5rem;
+	}
+}
+
+
+// Alternate styles
+.alert-warning {
+	@include alert-variant($alert__warning-bg, $alert__warning-border, $alert__warning-text);
+}
+
+.alert-success {
+	@include alert-variant($alert__success-bg, $alert__success-border, $alert__success-text);
+}
+
+.alert-error,
+.alert-danger {
+	@include alert-variant($alert__error-bg, $alert__error-border, $alert__error-text);
+}
+
+.alert-info {
+	@include alert-variant($alert__info-bg, $alert__info-border, $alert__info-text);
+}

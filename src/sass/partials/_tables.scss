@@ -1,0 +1,38 @@
+/* Tables
+   ========================================================================== */
+
+table {
+    margin-bottom: $size__gutter;
+    width: 100%;
+    border: 1px solid $table__border-color;
+    border-collapse: collapse;
+    background: $table__bg;
+    box-shadow: 0 1px 2px rgba(#000, 0.05);
+
+    th,
+    td {
+        padding: 0.8rem;
+        border: 1px solid $table__border-color;
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    // Table footer
+    tfoot td {
+        background: $tfoot__bg-color;
+        box-shadow: inset 0 1px 0 darken($tfoot__bg-color, 5%);
+        color: darken($tfoot__bg-color, 50%);
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+
+    // Table caption
+    caption {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+}
